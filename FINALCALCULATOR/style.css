@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.calculator {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.result {
+  -webkit-box-shadow: inset 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: #444;
+  color: #fff;
+  font-size: 2em;
+  padding: 10px;
+  text-align: right;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  height: 50px;
+}
+
+.btn {
+  width: 65px;
+  height: 65px;
+  font-size: 1.2em;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.clear {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.memory {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.operator {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.square-root {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.equal {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+#sidelang {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+#sidelang .btn {
+  background-color: #007bff;
+  width: fit-content;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#sidelang .btn:hover {
+  background-color: #0056b3;
+}
+#picture {
+  position: relative;
+  top: 28px;
+}
+#calctext {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 100px;
+}
+
+/* Media query for 932px or less */
+@media (max-width: 932px) {
+  #calctext {
+    display: none; /* Hide calculator text */
+  }
+  .history,
+  .memory {
+    height: 20px;
+  }
+  .calculator {
+    margin-top: 40px;
+  }
+  #picture {
+    position: relative;
+    top: 20px;
+  }
+
+  .btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Show sidebar content when clock icon is clicked */
+  #clockIcon:active + #sidelang #historyContent,
+  #clockIcon:active + #sidelang #memoryContent,
+  #clockIcon:active + #sidelang #picture {
+    display: block;
+  }
+}

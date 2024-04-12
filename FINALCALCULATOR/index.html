@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img id="calctext" src="calctext.png" alt="Calcutalor Text" />
+    <div id="sidelang">
+      <img
+        width="50px"
+        src="delete.png"
+        alt="Clear History"
+        onclick="clearHistory()"
+        id="picture"
+      />
+      <button class="btn history" onclick="showHistory()">History</button>
+      <button class="btn memory" onclick="showMemory()">Memory</button>
+      <div class="content" id="historyContent"></div>
+      <div class="content" id="memoryContent"></div>
+    </div>
+
+    <div class="calculator">
+      <div class="result" id="result">0</div>
+      <div id="memory">
+        <button class="btn" onclick="memoryRecall()">MR</button>
+        <button class="btn" onclick="memorySubtract()">M-</button>
+        <button class="btn" onclick="memoryAdd()">M+</button>
+      </div>
+      <button class="btn" onclick="clearResult()">AC</button>
+      <button class="btn" onclick="clearLast()">CE</button>
+      <button class="btn" onclick="setPercentage()">%</button>
+      <button class="btn operator" onclick="addToResult('/')">/</button><br />
+      <button class="btn" onclick="addToResult(7)">7</button>
+      <button class="btn" onclick="addToResult(8)">8</button>
+      <button class="btn" onclick="addToResult(9)">9</button>
+      <button class="btn operator" onclick="addToResult('*')">x</button><br />
+      <button class="btn" onclick="addToResult(4)">4</button>
+      <button class="btn" onclick="addToResult(5)">5</button>
+      <button class="btn" onclick="addToResult(6)">6</button>
+      <button class="btn operator" onclick="addToResult('-')">-</button><br />
+      <button class="btn" onclick="addToResult(1)">1</button>
+      <button class="btn" onclick="addToResult(2)">2</button>
+      <button class="btn" onclick="addToResult(3)">3</button>
+      <button class="btn operator" onclick="addToResult('+')">+</button><br />
+      <button class="btn" onclick="calculateSquareRoot()">√</button>
+      <button class="btn" onclick="addToResult(0)">0</button>
+      <button class="btn" onclick="addToResult('.')">.</button>
+      <button class="btn" onclick="calculate()">=</button><br />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
